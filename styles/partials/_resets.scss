@@ -1,0 +1,19 @@
+@use "./typography" as *;
+*,
+*::before
+*::after { 
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+body {
+    background-image: url(/assets/images/background_img.jpeg);
+    background-position: contain;
+    font-size: 1.6rem;
+    margin:0;
+    padding-bottom:4rem;
+    font-family: "Rubik", sans-serif;
+    color:#BCC7E1;
+}

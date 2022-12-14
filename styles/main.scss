@@ -1,0 +1,124 @@
+@use "./partials/resets";
+@use "./partials/mixins" as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgba(33, 45, 95, 0.9);
+  padding: 0 2rem;
+  border-bottom: 2px solid #3e5392;
+
+  &__title {
+    color: #fbd35a;
+    text-shadow: 1px 1px black;
+    margin-bottom: 0;
+  }
+  &__info {
+    margin: 1rem;
+    margin-left: 0;
+    padding-bottom: 2rem;
+  }
+}
+
+.questions {
+  display: flex;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+    background: linear-gradient(#87337e, #532f6f);
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 1px rgba(193, 88, 119, 0.3);
+    text-align: center;
+    padding: 4rem;
+    margin: 1rem;
+    margin-top: 4rem;
+    width: 80%;
+  }
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 95%;
+    padding: 4rem, 0;
+    margin: 4rem;
+  }
+  &__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: #212d5f;
+    border: 2px solid #3e5392;
+    box-shadow: 3px 3px 2px 1px rgba(193, 88, 119, 0.2);
+    border-radius: 5px;
+    width: 95%;
+    margin: 1.5rem;
+    padding: 1rem;
+
+    &:hover{
+      border: 2px solid #FBD35A;
+      }
+
+    &-pointer {
+      align-self: center;
+      margin-right: 1rem;
+      width: 0;
+      height: 0;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid #fbd35a;
+    }
+  }
+  @include tablet {
+    &__question {
+      align-self: center;
+      margin: 5rem;
+      width: 50%;
+    }
+
+    &__cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      width: 95%;
+    }
+
+    &__card {
+      width: 43%;
+      margin: auto;
+      margin-bottom: 2rem;
+    }
+  }
+}
+.right {
+  background-color: #158445;
+}
+
+.not-right {
+  background-color: #b8271f;
+}
+.footer {
+  background: rgba(33, 45, 95, 0.9);
+  padding: 5rem;
+  border-top: 2px solid #3e5392;
+  border-bottom: 2px solid #3e5392;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__button {
+    background: linear-gradient(#87337e, #532f6f);
+    padding: 1.5rem 3rem;
+    border-radius: 5px;
+    color:#BCC7E1;
+  }
+}
